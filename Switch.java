@@ -1,11 +1,19 @@
 public class Switch {
-    private int slope;
+    private int slant;
 
-    public int getSlope() {
-        return slope;
+    public int getSlant() {
+        return slant;
     }
 
-    public void setSlope(int slope) {
-        this.slope = slope;
+    public void setSlant(int slant) {
+        this.slant = slant;
+    }
+
+    public void update() {
+
+    }
+
+    public void fillTime() {
+
     }
 }

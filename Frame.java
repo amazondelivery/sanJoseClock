@@ -1,6 +1,7 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class Frame extends JFrame {
 
@@ -19,9 +20,18 @@ public class Frame extends JFrame {
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
-        //this.addMouseListener(new MouseAdapter() {
+        this.addMouseListener(new MouseAdapter() {
+            public void mousePressed(MouseEvent e) {
+                posX = e.getX();
+                posY = e.getY();
+            }
+        });
 
-        //}
+        this.addMouseMotionListener(new MouseAdapter() {
+            public void mouseDragged(MouseEvent e) {
+                setLocation (e.getXOnScreen() - posX, e.getYOnScreen() - posY);
+            }
+        });
         this.setTitle("San Jose's Clock");
     }
 

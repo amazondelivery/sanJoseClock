@@ -16,7 +16,7 @@ public class Frame extends JFrame {
     public Frame() {
         this.setUndecorated(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(1250, 500);
+        this.setSize(625, 250);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
@@ -37,6 +37,7 @@ public class Frame extends JFrame {
 
     public void paint(Graphics graph) {
         Graphics2D graphics = (Graphics2D) graph;
-        graphics.drawLine(0, 0, 350, 350);
+        graphics.setStroke(new BasicStroke(3));
+        graphics.drawLine(0, 0, 10, 10);
     }
 }
